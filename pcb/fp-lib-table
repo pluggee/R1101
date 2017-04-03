@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name Main)(type Github)(uri https://github.com/pluggee/main.pretty)(options "")(descr ""))
+  (lib (name pluggee)(type Github)(uri https://github.com/pluggee/pluggee.pretty)(options "")(descr ""))
+  (lib (name Particle)(type Eagle)(uri /home/sherif/git/KiCADLibs/eagle/Particle.lbr)(options "")(descr ""))
+)

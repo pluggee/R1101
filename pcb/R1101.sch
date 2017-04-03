@@ -1,0 +1,244 @@
+EESchema Schematic File Version 2
+LIBS:analog
+LIBS:cap_smd
+LIBS:cap_smd_extra
+LIBS:connect
+LIBS:datastorage
+LIBS:devices
+LIBS:electromechanical
+LIBS:inductors
+LIBS:logic
+LIBS:mem
+LIBS:microcontroller
+LIBS:res_smd
+LIBS:res_smd_extra
+LIBS:RoboPlatform
+LIBS:systems
+LIBS:power
+LIBS:R1101-cache
+EELAYER 25 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "R1100 C.H.I.P. Pro Interposer with Host USB 2.0"
+Date "2017-04-02"
+Rev "v1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L COMPUTE_MOD_1 J1
+U 1 1 58E1E7AC
+P 5600 4700
+F 0 "J1" H 5450 5700 60  0000 L CNN
+F 1 "COMPUTE_MOD_1" H 5450 5800 60  0000 L CNN
+F 2 "Main:COMPUTE_MOD_1" H 5450 3700 39  0000 L CNN
+F 3 "" H 5600 4700 60  0001 C CNN
+	1    5600 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 4350 7350 4350
+Wire Wire Line
+	5950 4450 6250 4450
+Wire Wire Line
+	5950 4850 7250 4850
+Wire Wire Line
+	5950 4950 7150 4950
+Wire Wire Line
+	5950 5250 6900 5250
+Wire Wire Line
+	5950 5350 7000 5350
+Wire Wire Line
+	5950 5450 7150 5450
+Wire Wire Line
+	5950 5550 7250 5550
+Wire Wire Line
+	6650 3100 6650 3950
+Wire Wire Line
+	6650 3950 5950 3950
+Wire Wire Line
+	6550 3025 6550 3850
+Wire Wire Line
+	6550 3850 5950 3850
+Text Label 6150 3850 0    39   ~ 0
+USB+
+Text Label 6150 3950 0    39   ~ 0
+USB-
+$Comp
+L GND #PWR1
+U 1 1 58E1ECAF
+P 6025 5950
+F 0 "#PWR1" H 6025 5700 50  0001 C CNN
+F 1 "GND" H 6025 5800 50  0000 C CNN
+F 2 "" H 6025 5950 50  0001 C CNN
+F 3 "" H 6025 5950 50  0001 C CNN
+	1    6025 5950
+	1    0    0    -1  
+$EndComp
+Text Label 6150 4350 0    39   ~ 0
+5V
+Text Label 6250 4450 2    39   ~ 0
+~RST
+Text Label 6150 4850 0    39   ~ 0
+~RESET
+Text Label 6150 4950 0    39   ~ 0
+~ISP
+Text Label 6150 5250 0    39   ~ 0
+SYSRXD0-PHOTONTX
+Text Label 6150 5350 0    39   ~ 0
+SYSTXD0-PHOTONRX
+Text Label 6150 5450 0    39   ~ 0
+P0[26]
+Text Label 6150 5550 0    39   ~ 0
+P0[25]
+$Comp
+L PHOTON_SMD U1
+U 1 1 58E1F8F8
+P 7850 4500
+F 0 "U1" H 7525 5625 60  0000 L CNN
+F 1 "PHOTON_SMD" H 7525 5725 60  0000 L CNN
+F 2 "Main:PHOTON_SMD" H 7950 3350 60  0001 C CNN
+F 3 "" H 7850 4100 60  0001 C CNN
+	1    7850 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5250 6900 4550
+Wire Wire Line
+	6900 4550 7350 4550
+Wire Wire Line
+	7350 4650 7000 4650
+Wire Wire Line
+	7000 4650 7000 5350
+NoConn ~ 5950 5050
+NoConn ~ 5950 5150
+Wire Wire Line
+	7250 4850 7250 4950
+Wire Wire Line
+	7250 4950 7350 4950
+Wire Wire Line
+	7350 5050 7150 5050
+Wire Wire Line
+	7150 5050 7150 4950
+Wire Wire Line
+	7150 5450 7150 5150
+Wire Wire Line
+	7150 5150 7350 5150
+Wire Wire Line
+	7250 5550 7250 5250
+Wire Wire Line
+	7250 5250 7350 5250
+Wire Wire Line
+	6025 4050 6025 5950
+Wire Wire Line
+	5950 4050 7000 4050
+Wire Wire Line
+	5950 4550 6025 4550
+Connection ~ 6025 4550
+Wire Wire Line
+	7350 4450 7000 4450
+Wire Wire Line
+	7000 4450 7000 4050
+Connection ~ 6025 4050
+$Comp
+L RC0603FR-070RL R1
+U 1 1 58E1FED3
+P 8800 3300
+F 0 "R1" H 8830 3320 50  0000 L CNN
+F 1 "RC0603FR-070RL" H 8840 3260 15  0000 L CNN
+F 2 "Main:RESC0603" H 8900 3225 10  0001 C CNN
+F 3 "" H 8830 3320 50  0000 C CNN
+F 4 "Yageo" H 8750 3380 28  0000 R CNN "Manufacturer"
+F 5 "RC0603FR-070RL" H 8750 3340 12  0000 R CNN "MPN"
+F 6 "STUFF" H 8750 3210 20  0000 R CNN "SKU"
+F 7 "0.00 Ω" H 8750 3310 20  0000 R CNN "Res"
+F 8 "±1%" H 8750 3280 20  0000 R CNN "Tol"
+F 9 "100 mW" H 8750 3250 20  0000 R CNN "Pwr"
+	1    8800 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L RC0603FR-070RL R2
+U 1 1 58E1FFE5
+P 8900 3650
+F 0 "R2" H 8930 3670 50  0000 L CNN
+F 1 "RC0603FR-070RL" H 8940 3610 15  0000 L CNN
+F 2 "Main:RESC0603" H 9000 3575 10  0001 C CNN
+F 3 "" H 8930 3670 50  0000 C CNN
+F 4 "Yageo" H 8850 3730 28  0000 R CNN "Manufacturer"
+F 5 "RC0603FR-070RL" H 8850 3690 12  0000 R CNN "MPN"
+F 6 "STUFF" H 8850 3560 20  0000 R CNN "SKU"
+F 7 "0.00 Ω" H 8850 3660 20  0000 R CNN "Res"
+F 8 "±1%" H 8850 3630 20  0000 R CNN "Tol"
+F 9 "100 mW" H 8850 3600 20  0000 R CNN "Pwr"
+	1    8900 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 3650 8800 3650
+Wire Wire Line
+	8700 3300 8600 3300
+Wire Wire Line
+	8600 3300 8600 3550
+Wire Wire Line
+	8600 3550 8350 3550
+Wire Wire Line
+	8900 3300 9050 3300
+Wire Wire Line
+	9050 3300 9050 3025
+Wire Wire Line
+	9050 3025 6550 3025
+Wire Wire Line
+	6650 3100 9150 3100
+Wire Wire Line
+	9150 3100 9150 3650
+Wire Wire Line
+	9150 3650 9000 3650
+Text Label 8350 3550 0    39   ~ 0
+pUSB+
+Text Label 8350 3650 0    39   ~ 0
+pUSB-
+$Comp
+L GND #PWR2
+U 1 1 58E201E4
+P 8600 4850
+F 0 "#PWR2" H 8600 4600 50  0001 C CNN
+F 1 "GND" H 8600 4700 50  0000 C CNN
+F 2 "" H 8600 4850 50  0001 C CNN
+F 3 "" H 8600 4850 50  0001 C CNN
+	1    8600 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 4850 8600 4650
+Wire Wire Line
+	8600 4650 8350 4650
+Wire Wire Line
+	8350 4450 8750 4450
+Text Label 8750 4450 2    39   ~ 0
+~RST
+NoConn ~ 7350 5350
+NoConn ~ 7350 5450
+NoConn ~ 7350 4850
+NoConn ~ 7350 4750
+NoConn ~ 8350 4750
+NoConn ~ 8350 4850
+NoConn ~ 8350 4950
+NoConn ~ 8350 5050
+NoConn ~ 8350 5150
+NoConn ~ 8350 5250
+NoConn ~ 8350 5350
+NoConn ~ 8350 5450
+NoConn ~ 8350 4550
+NoConn ~ 8350 4350
+NoConn ~ 8350 4150
+NoConn ~ 8350 4050
+NoConn ~ 8350 3950
+NoConn ~ 8350 3850
+NoConn ~ 8350 3750
+$EndSCHEMATC
