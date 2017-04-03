@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sherif/git/R1101/pcb/R1101.sch)
-    (date "Mon 03 Apr 2017 12:06:35 AM PDT")
+    (date "Mon 03 Apr 2017 01:57:17 PM PDT")
     (tool "Eeschema 4.0.6-e0-6349~53~ubuntu14.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -52,8 +52,19 @@
         (field (name Pwr) "100 mW"))
       (libsource (lib res_smd) (part RC0603FR-070RL))
       (sheetpath (names /) (tstamps /))
-      (tstamp 58E1FFE5)))
+      (tstamp 58E1FFE5))
+    (comp (ref A1)
+      (value ART)
+      (footprint pluggee:pluggeeLabsIcon-16X8)
+      (libsource (lib systems) (part ART))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 58E2B7DC)))
   (libparts
+    (libpart (lib systems) (part ART)
+      (description "Misc artwork - assign footprint")
+      (fields
+        (field (name Reference) A)
+        (field (name Value) ART)))
     (libpart (lib systems) (part COMPUTE_MOD_1)
       (description "Compute module, intended to attach C.H.I.P., particle.io or more")
       (fields
@@ -136,10 +147,10 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
-    (library (logical systems)
-      (uri /home/sherif/git/KiCADLibs/sch/systems.lib))
     (library (logical res_smd)
-      (uri /home/sherif/git/KiCADLibs/sch/res_smd.lib)))
+      (uri /home/sherif/git/KiCADLibs/sch/res_smd.lib))
+    (library (logical systems)
+      (uri /home/sherif/git/KiCADLibs/sch/systems.lib)))
   (nets
     (net (code 1) (name /pUSB+)
       (node (ref U1) (pin 31))
