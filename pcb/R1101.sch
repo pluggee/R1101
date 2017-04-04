@@ -41,30 +41,6 @@ F 3 "" H 5600 4700 60  0001 C CNN
 	1    5600 4700
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5950 4350 7350 4350
-Wire Wire Line
-	5950 4450 6250 4450
-Wire Wire Line
-	5950 4850 7250 4850
-Wire Wire Line
-	5950 4950 7150 4950
-Wire Wire Line
-	5950 5250 6900 5250
-Wire Wire Line
-	5950 5350 7000 5350
-Wire Wire Line
-	5950 5450 7150 5450
-Wire Wire Line
-	5950 5550 7250 5550
-Wire Wire Line
-	6650 3100 6650 3950
-Wire Wire Line
-	6650 3950 5950 3950
-Wire Wire Line
-	6550 3025 6550 3850
-Wire Wire Line
-	6550 3850 5950 3850
 Text Label 6150 3850 0    39   ~ 0
 USB+
 Text Label 6150 3950 0    39   ~ 0
@@ -107,44 +83,6 @@ F 3 "" H 7850 4100 60  0001 C CNN
 	1    7850 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6900 5250 6900 4550
-Wire Wire Line
-	6900 4550 7350 4550
-Wire Wire Line
-	7350 4650 7000 4650
-Wire Wire Line
-	7000 4650 7000 5350
-NoConn ~ 5950 5050
-NoConn ~ 5950 5150
-Wire Wire Line
-	7250 4850 7250 4950
-Wire Wire Line
-	7250 4950 7350 4950
-Wire Wire Line
-	7350 5050 7150 5050
-Wire Wire Line
-	7150 5050 7150 4950
-Wire Wire Line
-	7150 5450 7150 5150
-Wire Wire Line
-	7150 5150 7350 5150
-Wire Wire Line
-	7250 5550 7250 5250
-Wire Wire Line
-	7250 5250 7350 5250
-Wire Wire Line
-	6025 4050 6025 5950
-Wire Wire Line
-	5950 4050 7000 4050
-Wire Wire Line
-	5950 4550 6025 4550
-Connection ~ 6025 4550
-Wire Wire Line
-	7350 4450 7000 4450
-Wire Wire Line
-	7000 4450 7000 4050
-Connection ~ 6025 4050
 $Comp
 L RC0603FR-070RL R1
 U 1 1 58E1FED3
@@ -179,6 +117,115 @@ F 9 "100 mW" H 8850 3600 20  0000 R CNN "Pwr"
 	1    8900 3650
 	0    1    1    0   
 $EndComp
+Text Label 8350 3550 0    39   ~ 0
+pUSB+
+Text Label 8350 3650 0    39   ~ 0
+pUSB-
+$Comp
+L GND #PWR2
+U 1 1 58E201E4
+P 8600 4850
+F 0 "#PWR2" H 8600 4600 50  0001 C CNN
+F 1 "GND" H 8600 4700 50  0000 C CNN
+F 2 "" H 8600 4850 50  0001 C CNN
+F 3 "" H 8600 4850 50  0001 C CNN
+	1    8600 4850
+	1    0    0    -1  
+$EndComp
+Text Label 8750 4450 2    39   ~ 0
+~RST
+NoConn ~ 7350 5350
+NoConn ~ 7350 5450
+NoConn ~ 7350 4850
+NoConn ~ 7350 4750
+NoConn ~ 8350 4750
+NoConn ~ 8350 4850
+NoConn ~ 8350 4950
+NoConn ~ 8350 5050
+NoConn ~ 8350 5150
+NoConn ~ 8350 5250
+NoConn ~ 8350 4550
+NoConn ~ 8350 4350
+NoConn ~ 8350 4150
+NoConn ~ 8350 4050
+NoConn ~ 8350 3950
+NoConn ~ 8350 3850
+NoConn ~ 8350 3750
+$Comp
+L ART A1
+U 1 1 58E2B7DC
+P 5650 2275
+F 0 "A1" H 5650 2225 39  0000 C CNN
+F 1 "ART" H 5650 2325 39  0000 C CNN
+F 2 "pluggee:pluggeeLabsIcon-16X8" H 5650 2275 39  0001 C CNN
+F 3 "" H 5650 2275 39  0001 C CNN
+	1    5650 2275
+	1    0    0    -1  
+$EndComp
+Text Label 6350 5050 2    39   ~ 0
+SCK
+Text Label 6350 5150 2    39   ~ 0
+SDA
+Wire Wire Line
+	5950 4350 7350 4350
+Wire Wire Line
+	5950 4450 6250 4450
+Wire Wire Line
+	5950 4850 7250 4850
+Wire Wire Line
+	5950 4950 7150 4950
+Wire Wire Line
+	5950 5250 6900 5250
+Wire Wire Line
+	5950 5350 7000 5350
+Wire Wire Line
+	5950 5450 7150 5450
+Wire Wire Line
+	5950 5550 7250 5550
+Wire Wire Line
+	6650 3100 6650 3950
+Wire Wire Line
+	6650 3950 5950 3950
+Wire Wire Line
+	6550 3025 6550 3850
+Wire Wire Line
+	6550 3850 5950 3850
+Wire Wire Line
+	6900 5250 6900 4550
+Wire Wire Line
+	6900 4550 7350 4550
+Wire Wire Line
+	7350 4650 7000 4650
+Wire Wire Line
+	7000 4650 7000 5350
+Wire Wire Line
+	7250 4850 7250 4950
+Wire Wire Line
+	7250 4950 7350 4950
+Wire Wire Line
+	7350 5050 7150 5050
+Wire Wire Line
+	7150 5050 7150 4950
+Wire Wire Line
+	7150 5450 7150 5150
+Wire Wire Line
+	7150 5150 7350 5150
+Wire Wire Line
+	7250 5550 7250 5250
+Wire Wire Line
+	7250 5250 7350 5250
+Wire Wire Line
+	6025 4050 6025 5950
+Wire Wire Line
+	5950 4050 7000 4050
+Wire Wire Line
+	5950 4550 6025 4550
+Connection ~ 6025 4550
+Wire Wire Line
+	7350 4450 7000 4450
+Wire Wire Line
+	7000 4450 7000 4050
+Connection ~ 6025 4050
 Wire Wire Line
 	8350 3650 8800 3650
 Wire Wire Line
@@ -199,57 +246,22 @@ Wire Wire Line
 	9150 3100 9150 3650
 Wire Wire Line
 	9150 3650 9000 3650
-Text Label 8350 3550 0    39   ~ 0
-pUSB+
-Text Label 8350 3650 0    39   ~ 0
-pUSB-
-$Comp
-L GND #PWR2
-U 1 1 58E201E4
-P 8600 4850
-F 0 "#PWR2" H 8600 4600 50  0001 C CNN
-F 1 "GND" H 8600 4700 50  0000 C CNN
-F 2 "" H 8600 4850 50  0001 C CNN
-F 3 "" H 8600 4850 50  0001 C CNN
-	1    8600 4850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8600 4850 8600 4650
 Wire Wire Line
 	8600 4650 8350 4650
 Wire Wire Line
 	8350 4450 8750 4450
-Text Label 8750 4450 2    39   ~ 0
-~RST
-NoConn ~ 7350 5350
-NoConn ~ 7350 5450
-NoConn ~ 7350 4850
-NoConn ~ 7350 4750
-NoConn ~ 8350 4750
-NoConn ~ 8350 4850
-NoConn ~ 8350 4950
-NoConn ~ 8350 5050
-NoConn ~ 8350 5150
-NoConn ~ 8350 5250
-NoConn ~ 8350 5350
-NoConn ~ 8350 5450
-NoConn ~ 8350 4550
-NoConn ~ 8350 4350
-NoConn ~ 8350 4150
-NoConn ~ 8350 4050
-NoConn ~ 8350 3950
-NoConn ~ 8350 3850
-NoConn ~ 8350 3750
-$Comp
-L ART A1
-U 1 1 58E2B7DC
-P 5650 2275
-F 0 "A1" H 5650 2225 39  0000 C CNN
-F 1 "ART" H 5650 2325 39  0000 C CNN
-F 2 "pluggee:pluggeeLabsIcon-16X8" H 5650 2275 39  0001 C CNN
-F 3 "" H 5650 2275 39  0001 C CNN
-	1    5650 2275
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	5950 5050 6350 5050
+Wire Wire Line
+	5950 5150 6350 5150
+Wire Wire Line
+	8350 5450 8750 5450
+Text Label 8750 5450 2    39   ~ 0
+SDA
+Wire Wire Line
+	8350 5350 8750 5350
+Text Label 8750 5350 2    39   ~ 0
+SCK
 $EndSCHEMATC
